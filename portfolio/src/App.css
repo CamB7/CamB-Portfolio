@@ -6,3 +6,11 @@
   padding: 2rem;
   text-align: center;
 }
+
+body {
+  background-color: #1d1d1d;
+  color: #badbc7;
+  font-family: 'Jersey 20', serif;
+  margin: 0;
+  padding: 0;
+}
