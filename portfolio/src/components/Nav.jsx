@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 import CBlogo from '../images/CBlogo.png';
 import githubIcon from '../images/githublogo.png';
 import linkedinIcon from '../images/linkedinlogo.png';
@@ -8,7 +9,10 @@ const Nav = () => {
   return (
     <div className="vertical-nav">
       <div className="nav-top">
-        <img src={CBlogo}></img>
+        <img
+          src={CBlogo}
+          alt="Logo"
+        />
         <h1>
           Cameron
           <br />
@@ -19,13 +23,28 @@ const Nav = () => {
       <div className="nav-bottom">
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <NavLink
+              to="/"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <NavLink
+              to="/skills"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Skills
+            </NavLink>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <NavLink
+              to="/projects"
+              className={({ isActive }) => (isActive ? 'active' : '')}
+            >
+              Projects
+            </NavLink>
           </li>
         </ul>
         <hr />
